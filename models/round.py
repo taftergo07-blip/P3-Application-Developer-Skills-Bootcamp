@@ -4,8 +4,13 @@ class Round:
         self.matches = matches if matches is not None else []
 
     def serialize(self):
-        return {"matches": [m.serialize() for m in self.matches]}
-
+        return [m.serialize() for m in self.matches]
+    
     @classmethod
     def deserialize(cls, data):
-        return cls(matches=[Match.deserialize(d) for d in data["matches"]])
+        return cls(matches=[Match.deserialize(d) for d in data])
+"""m1 = Match("AB12345", "CD67890")
+r = Round(matches=[m1])
+print(r.serialize())
+r2 = Round.deserialize(r.serialize())
+print(r2.matches[0].player1)"""
