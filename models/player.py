@@ -51,8 +51,20 @@ class Player:
     def serialize(self):
         """Serialize the instance in a format compatible with JSON"""
 
-        data = {attr: getattr(self, attr) for attr in ("name", "email", "chess_id")}
-        # We make sure to use the str representation of the date
-        # datetime is notnatively serializable in JSON
-        data["birthday"] = self.birthday
-        return data
+        return {
+            "name": self.name,
+            "email": self.email,
+            "chess_id": self.chess_id,
+            # We make sure to use the str representation of the date
+            # datetime is not natively serializable in JSON
+            "birthday": self.birthday,
+        }
+
+    @classmethod
+    def deserialize(cls, data):
+        return cls(
+            name=data["name"],
+            email=data["email"],
+            chess_id=data["chess_id"],
+            birthday=data["birthday"],
+        )

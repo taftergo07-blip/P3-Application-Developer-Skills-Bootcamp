@@ -18,10 +18,10 @@ class Match:
             player1=data["players"][0],
             player2=data["players"][1],
             completed=data["completed"],
-            winner=data["winner"],
+            winner=data.get("winner"),
         )
-m = Match("AB12345", "CD67890")
+"""m = Match("AB12345", "CD67890")
 d = m.serialize()
 m2 = Match.deserialize(d)
-print(m2.player1, m2.winner)
+print(m2.player1, m2.winner)"""
 
