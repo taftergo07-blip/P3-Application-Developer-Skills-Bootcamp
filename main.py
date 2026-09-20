@@ -1,11 +1,14 @@
 from commands.tournament_list import TournamentListCmd
 from screens.tournament_menu import TournamentMenu
+from screens.tournament_view import TournamentView
+
 
 class App:
     """The main controller for the tournament management program"""
 
     SCREENS = {
         "main-menu": TournamentMenu,
+        "tournament-view": TournamentView,
         "exit": False,
     }
 
