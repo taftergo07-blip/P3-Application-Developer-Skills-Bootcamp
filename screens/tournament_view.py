@@ -21,11 +21,33 @@ class TournamentView(BaseScreen):
         print(f"Players registered: {len(t.players)}")
 
     def get_command(self):
+        t = self.tournament
         while True:
-            print("\nType R to return to the main menu.")
-            print("Type X to exit.")
-            value = self.input_string()
-            if value.upper() == "R":
+            print("\nActions:")
+            if not t.completed:
+                if t.rounds:
+                    print("  E - Enter results for the current round")
+                    print("  N - Advance to the next round")
+                else:
+                    print("  S - Start the tournament (first round)")
+                print("  A - Add a player")
+            print("  P - View report (players and points)")
+            print("  R - Return to main menu")
+            print("  X - Exit")
+
+            value = self.input_string().upper()
+            if value == "R":
                 return TournamentListCmd()
-            elif value.upper() == "X":
+            elif value == "X":
                 return ExitCmd()
+            elif value == "E" and not t.completed and t.rounds:
+                from commands.noop import NoopCmd
+                return NoopCmd("enter-results", tournament=t)
+            elif value == "S" and not t.completed and not t.rounds:
+                from commands.advance_round import AdvanceRoundCmd
+                return AdvanceRoundCmd(t)
+            elif value == "N" and not t.completed and t.rounds:
+                confirm = self.input_string("Advance to the next round? (y/n)")
+                if confirm.lower() == "y":
+                    from commands.advance_round import AdvanceRoundCmd
+                    return AdvanceRoundCmd(t)

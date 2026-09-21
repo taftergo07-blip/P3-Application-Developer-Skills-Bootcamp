@@ -1,6 +1,7 @@
 from commands.tournament_list import TournamentListCmd
 from screens.tournament_menu import TournamentMenu
 from screens.tournament_view import TournamentView
+from screens.enter_results import EnterResults
 
 
 class App:
@@ -9,6 +10,7 @@ class App:
     SCREENS = {
         "main-menu": TournamentMenu,
         "tournament-view": TournamentView,
+        "enter-results": EnterResults,
         "exit": False,
     }
 

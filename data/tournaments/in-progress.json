@@ -6,7 +6,7 @@
     },
     "venue": "Cornville Town Hall",
     "number_of_rounds": 4,
-    "current_round": 2,
+    "current_round": 3,
     "completed": false,
     "players": [
         "LU33889",
@@ -59,7 +59,7 @@
                     "YJ29085",
                     "OU52460"
                 ],
-                "completed": false,
+                "completed": true,
                 "winner": "OU52460"
             },
             {
@@ -75,11 +75,46 @@
                     "OH36083",
                     "XW31336"
                 ],
-                "completed": false
+                "completed": true,
+                "winner": "XW31336"
             },
             {
                 "players": [
                     "LU33889",
+                    "OS93227"
+                ],
+                "completed": true,
+                "winner": "LU33889"
+            }
+        ],
+        [
+            {
+                "players": [
+                    "OU52460",
+                    "PB43166"
+                ],
+                "completed": false,
+                "winner": null
+            },
+            {
+                "players": [
+                    "LU33889",
+                    "YJ29085"
+                ],
+                "completed": false,
+                "winner": null
+            },
+            {
+                "players": [
+                    "XW31336",
+                    "AV07547"
+                ],
+                "completed": false,
+                "winner": null
+            },
+            {
+                "players": [
+                    "OH36083",
                     "OS93227"
                 ],
                 "completed": false,
