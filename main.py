@@ -2,7 +2,7 @@ from commands.tournament_list import TournamentListCmd
 from screens.tournament_menu import TournamentMenu
 from screens.tournament_view import TournamentView
 from screens.enter_results import EnterResults
-
+from screens.tournament_report import TournamentReport
 
 class App:
     """The main controller for the tournament management program"""
@@ -12,6 +12,7 @@ class App:
         "tournament-view": TournamentView,
         "enter-results": EnterResults,
         "exit": False,
+        "tournament-report": TournamentReport,
     }
 
     def __init__(self):

@@ -51,3 +51,6 @@ class TournamentView(BaseScreen):
                 if confirm.lower() == "y":
                     from commands.advance_round import AdvanceRoundCmd
                     return AdvanceRoundCmd(t)
+            elif value == "P":
+                from commands.noop import NoopCmd
+                return NoopCmd("tournament-report", tournament=t)
