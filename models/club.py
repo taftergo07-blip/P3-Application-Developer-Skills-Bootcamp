@@ -26,9 +26,7 @@ class ChessClub:
             with open(filepath) as fp:
                 data = json.load(fp)
                 self.name = data["name"]
-                self.players = [
-                    Player(**player_dict) for player_dict in data["players"]
-                ]
+                self.players = [Player(**player_dict) for player_dict in data["players"]]
         elif not filepath:
             # We did not have a file, so we are going to create it by running the save method
             self.save()

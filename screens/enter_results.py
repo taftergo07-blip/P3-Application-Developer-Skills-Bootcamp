@@ -22,7 +22,7 @@ class EnterResults(BaseScreen):
             print(f"\n{p1} vs {p2}")
             print(f"  1 - {p1} wins")
             print(f"  2 - {p2} wins")
-            print(f"  D - Draw")
+            print("  D - Draw")
             while True:
                 choice = self.input_string().upper()
                 if choice == "1":

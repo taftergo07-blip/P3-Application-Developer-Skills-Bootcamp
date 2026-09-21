@@ -18,10 +18,7 @@ class RegisterPlayer(BaseScreen):
         term = self.input_string("Search by name or chess ID")
         term = term.lower()
 
-        matches = [
-            p for p in players.values()
-            if term in p.name.lower() or term in p.chess_id.lower()
-        ]
+        matches = [p for p in players.values() if term in p.name.lower() or term in p.chess_id.lower()]
 
         if not matches:
             print("No players found.")

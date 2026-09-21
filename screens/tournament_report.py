@@ -14,8 +14,7 @@ class TournamentReport(BaseScreen):
         t = self.tournament
         print(f"=== Report: {t.name} ===")
         print(f"Venue: {t.venue}")
-        print(f"Dates: {t.start_date.strftime('%d-%m-%Y')} "
-              f"to {t.end_date.strftime('%d-%m-%Y')}")
+        print(f"Dates: {t.start_date.strftime('%d-%m-%Y')} " f"to {t.end_date.strftime('%d-%m-%Y')}")
 
         print("\n--- Standings ---")
         points = t.get_points()

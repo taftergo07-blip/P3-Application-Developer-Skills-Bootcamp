@@ -5,11 +5,22 @@ from datetime import datetime
 from models.match import Match
 from models.round import Round
 
+
 class Tournament:
     DATE_FORMAT = "%d-%m-%Y"
 
-    def __init__(self, name, venue, start_date, end_date, number_of_rounds,
-                 players=None, rounds=None, current_round=1, completed=False):
+    def __init__(
+        self,
+        name,
+        venue,
+        start_date,
+        end_date,
+        number_of_rounds,
+        players=None,
+        rounds=None,
+        current_round=1,
+        completed=False,
+    ):
         if not name:
             raise ValueError("Tournament name is required!")
         self.name = name
@@ -57,10 +68,8 @@ class Tournament:
             raise ValueError("Odd number of players!")
         shuffled = self.players[:]
         random.shuffle(shuffled)
-        return Round(matches=[
-            Match(shuffled[i], shuffled[i + 1])
-            for i in range(0, len(shuffled), 2)
-        ])
+        return Round(matches=[Match(shuffled[i], shuffled[i + 1]) for i in range(0, len(shuffled), 2)])
+
     def get_points(self):
         points = {p: 0 for p in self.players}
         for rnd in self.rounds:
@@ -72,8 +81,8 @@ class Tournament:
                 else:
                     points[match.player1] += 0.5
                     points[match.player2] += 0.5
-        return points  
-    
+        return points
+
     def create_next_round(self):
         """Creates the next round based on the current points."""
         if self.completed:
@@ -86,7 +95,7 @@ class Tournament:
         for i in range(0, len(sorted_players), 2):
             matches.append(Match(sorted_players[i], sorted_players[i + 1]))
         return Round(matches=matches)
-    
+
     def save(self, filepath):
         with open(filepath, "w") as fp:
             json.dump(self.serialize(), fp, indent=4)
@@ -96,7 +105,7 @@ class Tournament:
         with open(filepath) as fp:
             return cls.deserialize(json.load(fp))
 
-        
+
 if __name__ == "__main__":
     print("--- completed.json ---")
     t = Tournament.load("data/tournaments/completed.json")

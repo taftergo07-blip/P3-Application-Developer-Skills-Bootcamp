@@ -13,6 +13,7 @@ def all_players():
             continue
         with open(os.path.join(CLUB_DIR, filename)) as fp:
             import json
+
             data = json.load(fp)
         for p in data["players"]:
             player = Player(**p)

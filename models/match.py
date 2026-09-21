@@ -20,8 +20,9 @@ class Match:
             completed=data["completed"],
             winner=data.get("winner"),
         )
+
+
 """m = Match("AB12345", "CD67890")
 d = m.serialize()
 m2 = Match.deserialize(d)
 print(m2.player1, m2.winner)"""
-

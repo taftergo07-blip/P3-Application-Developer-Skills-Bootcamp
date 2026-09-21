@@ -2,6 +2,7 @@
 This script allows anyone to create a JSON file for a chess club.
 It will be filled with random members.
 """
+
 import argparse
 import json
 import random
@@ -35,9 +36,7 @@ def make_club(name, fname=None, count=20):
     # Start with the club name
     data = {"name": name}
     # Add the players from Faker
-    data["players"] = [
-        {key: getattr(fake, key)() for key in ATTRS} for _ in range(count)
-    ]
+    data["players"] = [{key: getattr(fake, key)() for key in ATTRS} for _ in range(count)]
 
     # Generate birthdays, but make sure that the player is not too young
     for player in data["players"]:
@@ -62,9 +61,7 @@ if __name__ == "__main__":
     # File name (not required)
     parser.add_argument("filename", type=str, nargs="?", help="JSON file name")
     # Number of players (not required)
-    parser.add_argument(
-        "--count", type=int, nargs="?", help="Number of players to generate"
-    )
+    parser.add_argument("--count", type=int, nargs="?", help="Number of players to generate")
 
     args = parser.parse_args()
     make_club(name=args.clubname, fname=args.filename, count=args.count)
