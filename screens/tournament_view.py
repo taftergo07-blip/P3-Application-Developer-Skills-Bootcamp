@@ -54,3 +54,6 @@ class TournamentView(BaseScreen):
             elif value == "P":
                 from commands.noop import NoopCmd
                 return NoopCmd("tournament-report", tournament=t)
+            elif value == "A" and not t.completed:
+                from commands.noop import NoopCmd
+                return NoopCmd("register-player", tournament=t)
