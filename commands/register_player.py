@@ -11,7 +11,7 @@ class RegisterPlayerCmd(BaseCommand):
 
     def execute(self):
         t = self.tournament
-        if self.chess_id not in t.players:
+        if self.chess_id and self.chess_id not in t.players:
             t.players.append(self.chess_id)
             t.save(t.filepath)
         return Context("tournament-view", tournament=t)

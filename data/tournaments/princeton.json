@@ -1,0 +1,37 @@
+{
+    "name": "Princeton",
+    "dates": {
+        "from": "02-04-2026",
+        "to": "03-04-2026"
+    },
+    "venue": "Princeton University",
+    "number_of_rounds": 2,
+    "current_round": 1,
+    "completed": false,
+    "players": [
+        "CF24301",
+        "NG39713",
+        "QZ98880",
+        "QQ22510"
+    ],
+    "rounds": [
+        [
+            {
+                "players": [
+                    "QZ98880",
+                    "NG39713"
+                ],
+                "completed": true,
+                "winner": "QZ98880"
+            },
+            {
+                "players": [
+                    "CF24301",
+                    "QQ22510"
+                ],
+                "completed": true,
+                "winner": "QQ22510"
+            }
+        ]
+    ]
+}

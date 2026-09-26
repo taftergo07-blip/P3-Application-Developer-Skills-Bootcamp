@@ -17,6 +17,7 @@ class TournamentMenu(BaseScreen):
     def get_command(self):
         while True:
             print("\nType a tournament number to open it.")
+            print("Type C to create a new tournament.")
             print("Type X to exit.")
             value = self.input_string()
             if value.isdigit():
@@ -26,5 +27,7 @@ class TournamentMenu(BaseScreen):
                         "tournament-view",
                         tournament=self.tournaments[number - 1],
                     )
+            elif value.upper() == "C":
+                return NoopCmd("create-tournament")
             elif value.upper() == "X":
                 return ExitCmd()

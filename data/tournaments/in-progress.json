@@ -95,15 +95,15 @@
                     "OU52460",
                     "PB43166"
                 ],
-                "completed": false,
-                "winner": null
+                "completed": true,
+                "winner": "OU52460"
             },
             {
                 "players": [
                     "LU33889",
                     "YJ29085"
                 ],
-                "completed": false,
+                "completed": true,
                 "winner": null
             },
             {
@@ -111,16 +111,16 @@
                     "XW31336",
                     "AV07547"
                 ],
-                "completed": false,
-                "winner": null
+                "completed": true,
+                "winner": "AV07547"
             },
             {
                 "players": [
                     "OH36083",
                     "OS93227"
                 ],
-                "completed": false,
-                "winner": null
+                "completed": true,
+                "winner": "OH36083"
             }
         ]
     ]
