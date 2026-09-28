@@ -1,0 +1,36 @@
+{
+    "name": "Family Chess Club",
+    "players": [
+        {
+            "name": "Martha Bon",
+            "email": "martha2@gmail.com",
+            "chess_id": "XX39458",
+            "birthday": "19-09-2005"
+        },
+        {
+            "name": "John Bar", 
+            "email": "johnbar@gmail.com",
+            "chess_id": "OU52460",
+            "birthday": "22-11-2004"
+        },
+        {
+            "name": "Levi Smith", 
+            "email": "levi@gmail.com",
+            "chess_id": "RI14529",
+            "birthday": "29-01-2004"
+        },
+        {
+            "name": "Yelina Qiu", 
+            "email": "yelina@gmail.com",
+            "chess_id": "RY03677",
+            "birthday": "1-08-2002"
+        },
+        {
+            "name": "Dylan Purr", 
+            "email": "dyla@gmail.com",
+            "chess_id": "AV07547",
+            "birthday": "15-06-2003"
+        }
+
+    ]
+}
