@@ -15,12 +15,7 @@ class AdvanceRoundCmd(BaseCommand):
         else:
             new_round = t.create_first_round()
         t.rounds.append(new_round)
-
-        if len(t.rounds) >= t.number_of_rounds:
-            t.completed = True
-            t.current_round = None
-        else:
-            t.current_round = len(t.rounds)
+        t.current_round = len(t.rounds)
 
         t.save(t.filepath)
         return Context("tournament-view", tournament=t)

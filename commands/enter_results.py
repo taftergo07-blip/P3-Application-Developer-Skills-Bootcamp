@@ -15,5 +15,10 @@ class EnterResultsCmd(BaseCommand):
         for match, winner in zip(current_round.matches, self.results):
             match.winner = winner
             match.completed = True
+
+        if len(t.rounds) >= t.number_of_rounds:
+            t.completed = True
+            t.current_round = None
+
         t.save(t.filepath)
         return Context("tournament-view", tournament=t)

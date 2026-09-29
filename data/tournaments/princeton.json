@@ -1,0 +1,55 @@
+{
+    "name": "Princeton",
+    "dates": {
+        "from": "19-09-2026",
+        "to": "20-09-2026"
+    },
+    "venue": "Princeton University",
+    "number_of_rounds": 2,
+    "current_round": null,
+    "completed": true,
+    "players": [
+        "CF24301",
+        "JW63361",
+        "XX39458",
+        "RI14529"
+    ],
+    "rounds": [
+        [
+            {
+                "players": [
+                    "CF24301",
+                    "JW63361"
+                ],
+                "completed": true,
+                "winner": "CF24301"
+            },
+            {
+                "players": [
+                    "RI14529",
+                    "XX39458"
+                ],
+                "completed": true,
+                "winner": null
+            }
+        ],
+        [
+            {
+                "players": [
+                    "CF24301",
+                    "XX39458"
+                ],
+                "completed": true,
+                "winner": "XX39458"
+            },
+            {
+                "players": [
+                    "RI14529",
+                    "JW63361"
+                ],
+                "completed": true,
+                "winner": "JW63361"
+            }
+        ]
+    ]
+}
