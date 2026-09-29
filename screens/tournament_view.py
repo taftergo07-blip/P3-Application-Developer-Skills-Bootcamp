@@ -37,7 +37,7 @@ class TournamentView(BaseScreen):
 
             value = self.input_string().upper()
             if value == "R":
-                return TournamentListCmd()
+                return TournamentListCmd(force_list=True)
             elif value == "X":
                 return ExitCmd()
             elif value == "E" and not t.completed and t.rounds:

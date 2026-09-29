@@ -47,6 +47,6 @@ class TournamentReport(BaseScreen):
         while True:
             value = self.input_string().upper()
             if value == "R":
-                return TournamentListCmd()
+                return TournamentListCmd(force_list=True)
             elif value == "X":
                 return ExitCmd()
