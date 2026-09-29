@@ -1,7 +1,5 @@
 import os
-
 from models.tournament import Tournament
-
 from .base import BaseCommand
 from .context import Context
 

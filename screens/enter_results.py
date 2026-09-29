@@ -31,8 +31,8 @@ class EnterResults(BaseScreen):
             print(f"\n{label1} vs {label2}")
             print(f"  1 - {label1} wins")
             print(f"  2 - {label2} wins")
-            print(f"  D - Draw")
-            
+            print("  D - Draw")
+
             while True:
                 choice = self.input_string().upper()
                 if choice == "1":

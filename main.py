@@ -6,6 +6,7 @@ from screens.tournament_report import TournamentReport
 from screens.register_player import RegisterPlayer
 from screens.create_tournament import CreateTournament
 
+
 class App:
     """The main controller for the tournament management program"""
 

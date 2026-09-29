@@ -33,6 +33,4 @@ class CreateTournament(BaseScreen):
                 break
             print("Please enter a positive number.")
 
-        return CreateTournamentCmd(
-            name, venue, start_date, end_date, number_of_rounds
-        )
+        return CreateTournamentCmd(name, venue, start_date, end_date, number_of_rounds)

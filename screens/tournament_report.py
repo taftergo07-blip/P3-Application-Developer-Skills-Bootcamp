@@ -16,14 +16,13 @@ class TournamentReport(BaseScreen):
         if player:
             return f"{player.name} ({chess_id})"
         return chess_id
-    
+
     def display(self):
         players = all_players()
         t = self.tournament
         print(f"=== Report: {t.name} ===")
         print(f"Venue: {t.venue}")
-        print(f"Dates: {t.start_date.strftime('%d-%m-%Y')} "
-              f"to {t.end_date.strftime('%d-%m-%Y')}")
+        print(f"Dates: {t.start_date.strftime('%d-%m-%Y')} " f"to {t.end_date.strftime('%d-%m-%Y')}")
 
         print("\n--- Standings ---")
         points = t.get_points()
@@ -42,6 +41,7 @@ class TournamentReport(BaseScreen):
                 else:
                     result = "not played"
                 print(f"  {player1_label} vs {player2_label} -> {result}")
+
     def get_command(self):
         print("\nType R to return to the main menu, X to exit.")
         while True:
